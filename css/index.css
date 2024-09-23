@@ -1,0 +1,473 @@
+/***************************************************/
+/*     Web FULL ALL    */
+/*     Author: Pablo Camino Vázquez       */
+/*     Version 1.0 - 14/11/2022           */
+
+/************************************************/
+
+/***** FUENTES ******/
+@font-face {
+    font-family:font1;
+    src: url(./fonts/RobotoFlex-VariableFont_GRAD\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf);
+}
+
+/*Esto es para que el scroll sea suave*/
+html {scroll-behavior: smooth;}
+
+#wrapper {background-color: #fff;
+    width:80%;
+    margin:auto;}
+
+    
+*{
+    margin:0;
+    padding: 0;
+}
+
+/*OVERLAY*/
+.voltear {
+    position: relative;
+    width: 100%
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+
+}
+
+
+.voltear:hover .overlay {
+    opacity: 1;
+}
+
+
+/*Camiseta otoño*/
+.voltearotoño {
+    position: relative;
+    width: 100%
+}
+
+.overlayotoño {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+
+}
+
+.voltearotoño:hover .overlayotoño {
+    opacity: 1;
+}
+
+/**** contenedor grid  **************/
+.grid2 {display:grid;
+    grid-template-columns: 50% 50%;}
+
+.col2 img{width:80%;
+        height: auto;}
+
+.texto {padding:20px;
+            font-size:1.7em;
+        margin-top: 20%;}
+
+.texto p {margin-bottom:12px;}
+
+
+/*TITULOS*/
+.titulo-secciones {font-family: titulos;
+    font-size: 3rem;
+    text-align:center;
+    font-weight:bold;
+    color:rgb(0, 0, 0);
+    padding:4% 0;}
+
+
+/*Barra de navegacion*/
+    header .brand img{
+        height: 60px;
+    }
+
+    
+    header{
+        z-index: 999;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        transition: 0.6s;
+    }
+    
+    header.down{
+        background-color: white;
+        padding: 15px 80px;
+    }
+    
+    header .brand{
+        color: #fff;
+        font-size: 30px;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+    }
+    
+    header .menu{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    header .menu ul{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 40%;
+    }
+    
+    header .menu ul li{
+        list-style: none;
+    }
+    
+    header .menu a{
+        color: rgb(0, 0, 0);
+        text-transform: uppercase;
+        font-size: 16px;
+        text-decoration: none;
+        margin: 0 30px;
+        padding: 7px 12px;
+        border-radius: 20px;
+        transition: 0.3s;
+    }
+    
+    header .menu a:hover{
+        color: #000;
+        background: #fff;
+    }
+    
+    .section-two{
+        padding: 20px;
+    }
+    
+    header .btn{
+        color: rgb(0, 0, 0);
+        font-size: 25px;
+        cursor: pointer;
+        display: none;
+    }
+    
+    @media (max-width: 991px){
+        header, header.down{
+            padding: 20px 40px;
+        }
+        header .btn{
+        
+        }
+    
+        header .menu{
+        position: fixed;
+        background: #ffffff;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        transition: 0.5s;
+        transition-property: right;
+        padding-right: 15%;
+        }
+        
+        header .menu ul{
+            flex-direction: column;
+        }
+        
+        header .menu.active{
+        right: 0;
+        }
+    
+        header .menu .close-btn{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 25px;
+        }
+    
+        header .menu a{
+        display: block;
+        font-size: 20px;
+        margin: 20px;
+        padding: 0 15px;
+        
+        }
+    }
+    
+    @media (max-width: 700px){
+        .section-main h1{
+        font-size: 50px;
+        line-height: 60px;
+        }
+        
+    }
+
+
+/* HERO SECTION*/
+#hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/collage.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* INTRO SECTION  */
+
+#texto-intro {padding:0 2%;
+    font-size: 1.5em;
+    margin:0 4%;
+    text-indent:4rem;
+    border-left:5px solid rgb(0, 0, 0);
+    }
+
+/* SECTION AutumBrown*/
+#camiseta{margin-left: 25%;}
+
+
+/*Section Back to love*/
+
+#texto-introbl{padding:0 2%;
+    font-size: 1.5em;
+    margin:0 4%;
+    text-indent:4rem;
+    border-right:5px solid rgb(0, 0, 0);
+    }
+#amarilla{width: 93%;
+padding-left: 10%;}
+#negra{width: 93%;
+    margin-left: 13%}
+
+
+
+#diablo{margin-left: 25%;}
+
+
+
+/*FOOTER*/
+footer{
+    bottom: 0;
+    left: 0;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--dark);
+    color: white;
+    background-color: #121212;
+}
+
+.copyright-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.copyright{
+    font-size: 12px;
+    opacity: 0.7;
+    font-weight: 400;
+    padding: 10px 0;
+}
+
+.footer-menus{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 40%;
+}
+
+.footer-container{
+    height: fit-content;
+    width: 100%;
+    padding: 3rem 6rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-content-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+footer .website-logo{
+    margin-bottom: 1.2rem;
+    font-size: calc(1vw + 20px);
+}
+
+.footer-info, .menu-item-footer{
+    margin: 0.2rem 0;
+    opacity: 0.7;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.menu-item-footer:hover{
+    opacity: 1;
+}
+
+.menu-title{
+    font-size: var(--medium-text-font);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+
+.social-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+}
+
+.social-link{
+    height: 100%;
+    width: 30px;
+    background-image: url(../images/TwitterBlanco.png);
+    background-size: 70%;
+    background-position: center;
+    margin-right: 1rem;
+    background-repeat: no-repeat;
+}
+
+.social-link:hover{
+    opacity: 0.7;
+}
+
+footer .social-link:nth-of-type(2){
+    background-image: url(../images/InstagramBlanco.png);
+}
+
+footer .social-link:nth-of-type(3){/*Nth of type inside that container*/
+    background-image: url(../images/tiktoko.png);
+}
+
+
+
+
+
+
+
+
+
+
+/** MEDIA QUERIS*****/
+
+
+    @media only screen and (width<=1000px){
+        #wrapper {width:80%;
+            font-size:1rem;}
+        .overlay{
+            width: 90%;
+            padding-left: 10%;
+        }
+
+
+        header, header.down{
+            padding: 20px 40px;
+        }
+        header .btn{
+        display: block;
+        padding-top: 20px;
+        padding-left: 80%
+        }
+    
+        .grid2 {grid-template-columns:auto;}
+        #butterfly-hoodie{padding-left: 10%;}
+        #camiseta{width: 80%;}
+        #diablo{width: 80%;}
+
+    
+    }
+    
+    @media only screen and (width<=600px){
+        #wrapper {width:80%;
+            font-size:1rem;}
+            
+        .grid2 {grid-template-columns:auto;}
+        
+        .section-main h1{
+            font-size: 50px;
+            line-height: 60px;
+        }
+    
+
+        header .btn{
+            display: block;
+            padding-top: 20px;
+            padding-left: 65%;
+            }
+            #butterfly-hoodie{padding-left: 10%;
+                width: 100%;}
+            #camiseta{width: 80%;}
+            #diablo{width: 100%;}
+            
+    .footer-container{
+        padding: 2rem;
+        flex-direction: column;
+    }
+
+    .footer-content-container{
+        width: 100%;
+        padding: 2rem 0;
+        border-bottom: 1px solid #2A2A2A;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-content-container:nth-of-type(1){
+        align-items: flex-start;
+    }
+    .footer-content-container:nth-of-type(3){
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .footer-menus{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-bottom: 1px solid #2A2A2A;
+    }
+
+    .footer-menus .footer-content-container:nth-of-type(1){
+        width: 45%;
+        align-items: flex-start;
+        border-bottom: none;
+    }
+    .footer-menus .footer-content-container:nth-of-type(2){
+        width: 45%;
+        align-items: flex-start;
+        border-bottom: none;
+    }
+
+    }
